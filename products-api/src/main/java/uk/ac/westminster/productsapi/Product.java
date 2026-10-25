@@ -1,5 +1,9 @@
 package uk.ac.westminster.productsapi;
 
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
+
+
 public class Product {
     private Long id;
     private String name;
