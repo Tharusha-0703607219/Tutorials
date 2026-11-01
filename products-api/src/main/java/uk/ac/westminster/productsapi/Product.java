@@ -1,10 +1,7 @@
 package uk.ac.westminster.productsapi;
 
-import com.fasterxml.jackson.annotation.JsonSubTypes;
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
+public abstract class Product {
 
-
-public class Product {
     private Long id;
     private String name;
     private double price;
@@ -18,16 +15,18 @@ public class Product {
         this.price = price;
     }
 
+    public abstract String getSummary();
+
     public Long getId() {
-        return this.id;
+        return id;
     }
 
     public String getName() {
-        return this.name;
+        return name;
     }
 
     public double getPrice() {
-        return this.price;
+        return price;
     }
 
     public void setId(Long id) {
